@@ -42,15 +42,15 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("APP_ID","18049084"))
 api_hash = os.environ.get("API_HASH","7e74b1e22026fcc291d32b3d431aa21e")
-bot_token = os.environ.get("TOKEN","") # Botunuzun Tokenini Girin.
-sahib = os.environ.get("sahib", "") # Sahiplik Hesabin Kullanıcı Adını Girin .
-BOT_ID = int(os.environ.get("BOT_ID", "")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
-DATABASE_URL = os.environ.get("DATABASE_URL","") # MongoDB veritabanınızın url'si.
-BOT_USERNAME = os.environ.get("BOT_USERNAME","") # Botunuzun kullanıcı adı.
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
+bot_token = os.environ.get("TOKEN","6445812901:AAECbrb_kuwxuLMKKhpNUH0zh2K8AAzxBsc") # Botunuzun Tokenini Girin.
+sahib = os.environ.get("sahib", "rahmetiNC") # Sahiplik Hesabin Kullanıcı Adını Girin .
+BOT_ID = int(os.environ.get("BOT_ID", "6445812901")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
+DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://lexper:ahritv84@cluster0.hmry6dv.mongodb.net/?retryWrites=true&w=majority") # MongoDB veritabanınızın url'si.
+BOT_USERNAME = os.environ.get("BOT_USERNAME","AhriTaggerBot") # Botunuzun kullanıcı adı.
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001910817002")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
 GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", True) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
-OWNER_ID = int(os.environ.get("OWNER_ID","")) # Sahip hesabın id'si
+OWNER_ID = int(os.environ.get("OWNER_ID","5944841427")) # Sahip hesabın id'si
 LANGAUGE = os.environ.get("LANGAUGE", "TR")
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
