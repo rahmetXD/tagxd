@@ -76,7 +76,7 @@ etiketuye = []
 startmesaj = "Bazı Kullanışlı Özelliklere Sahip Telegram Üye Etiketleme Botuyum.\n\n📚 Komutlar Butonuna Tıklayın ve Komutları Öğrenin.**" 
 noadmin = "Üzgünüm Ama Yönetici Değilsiniz."
 nogroup = "Komutlar Sadece Grublarda Kullanılabilir."
-nomesaj = "Bana Bir Mesaj Verin.
+nomesaj = "Bana Bir Mesaj Verin."
 
 #######################
 
