@@ -48,7 +48,7 @@ BOT_ID = int(os.environ.get("BOT_ID", "6445812901")) # Botunuzun İd'si ( Tokeni
 DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://lexper:ahritv84@cluster0.hmry6dv.mongodb.net/?retryWrites=true&w=majority") # MongoDB veritabanınızın url'si.
 BOT_USERNAME = os.environ.get("BOT_USERNAME","AhriTaggerBot") # Botunuzun kullanıcı adı.
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001910817002")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
-GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
+GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "zeusprochecker") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", True) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
 OWNER_ID = int(os.environ.get("OWNER_ID","5944841427")) # Sahip hesabın id'si
 LANGAUGE = os.environ.get("LANGAUGE", "TR")
@@ -73,10 +73,10 @@ etiketuye = []
 
 # ~~~~~~~~~~~~~~~~~~~~~~~ gece ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-startmesaj = "\n\n**💌 Bazı Kullanışlı Özelliklere Sahip Telegram Üye Etiketleme Botuyum . . . \n\n📚 Komutlar Butonuna Tıklayın ve Komutları Öğrenin . . .**" 
-noadmin = "**➻ Üzgünüm Ama Yönetici Değilsiniz .**"
-nogroup = "**➻ Komutlar Sadece Grublarda Kullanılabilir .**"
-nomesaj = "**➻ Bana Bir Mesaj Verin .**"
+startmesaj = "Bazı Kullanışlı Özelliklere Sahip Telegram Üye Etiketleme Botuyum.\n\n📚 Komutlar Butonuna Tıklayın ve Komutları Öğrenin.**" 
+noadmin = "Üzgünüm Ama Yönetici Değilsiniz."
+nogroup = "Komutlar Sadece Grublarda Kullanılabilir."
+nomesaj = "Bana Bir Mesaj Verin.
 
 #######################
 
@@ -277,7 +277,7 @@ async def start(event):
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"👋🏻 **Merhaba**{startmesaj}", buttons=( 
+    return await client.send_message(event.chat_id, f"Merhaba!{startmesaj}", buttons=( 
                                                     [Button.url('💌 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 💌', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                                                     [
                                                     Button.url("📚 ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
